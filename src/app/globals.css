@@ -24,6 +24,8 @@
 
 html,
 body {
+  display: block;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   font-family: "Open Sans", "sans-serif";

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Open_Sans} from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 const inter = Open_Sans({ subsets: ["latin"] });
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon.ico", 
+        url: "/icon.ico",
         href: "/icon.ico",
       },
     ],
@@ -24,7 +25,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body suppressHydrationWarning={true} className={inter.className}>{children}</body>
+      <body suppressHydrationWarning={true} className={inter.className}>
+        <div className="lg:w-[81%] mx-auto fixed top-0 right-0 left-0 z-1000 lg:flex items-center py-[22px]">
+          <Navbar />
+        </div>
+
+        <div>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
