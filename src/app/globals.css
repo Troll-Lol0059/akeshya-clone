@@ -30,6 +30,7 @@ body {
   overflow-y: auto;
   font-family: "Open Sans", "sans-serif";
   color: #444444;
+  z-index: 0;
 }
 
 @layer utilities {

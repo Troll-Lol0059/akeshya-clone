@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body suppressHydrationWarning={true} className={inter.className}>
-        <div className="lg:w-[81%] mx-auto fixed top-0 right-0 left-0 z-1000 lg:flex items-center py-[22px]">
+        <div className="lg:w-[85%] mx-auto fixed top-0 right-0 left-0 z-1000 lg:flex items-center py-[22px]">
           <Navbar />
         </div>
 
