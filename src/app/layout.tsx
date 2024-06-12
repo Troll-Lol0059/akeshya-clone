@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const inter = Open_Sans({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Akeshya",
@@ -25,8 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body suppressHydrationWarning={true} className={inter.className}>
-        <div className="lg:w-[85%] mx-auto fixed top-0 right-0 left-0 z-1000 lg:flex items-center py-[22px]">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+      </head>
+
+      <body suppressHydrationWarning={true} className={`${openSans.className} ${raleway.className}`}>
+        <div className="lg:w-[88%] mx-auto fixed top-0 right-0 left-0 z-1000 lg:flex items-center py-6 px-6 lg:py-[8px] lg:px-0 md:px-0 md:py-[16px] bg-white shadow-sm">
           <Navbar />
         </div>
 

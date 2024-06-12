@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,7 +18,6 @@
   }
 }
 
-
 *{
   margin: 0;
   padding: 0;
@@ -29,14 +29,35 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: "Open Sans", "sans-serif";
+  font-family: 'Raleway', sans-serif;
   color: #444444;
   z-index: 0;
 }
 
-.navbar-spacing {
-  margin-top: var(--navbar-height, 100px);
+.button{
+  transition-duration: 0.5s;
 }
+
+.navbar-spacing {
+  margin-top: var(--navbar-height, 90px);
+}
+
+@media (min-width: 1024px) {
+  .imageAnimation {
+    scale: 1.3;
+    animation: up-down 3s ease-in-out infinite alternate-reverse both;
+  }
+}
+
+@keyframes up-down {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(30px);
+  }
+}
+
 
 @layer utilities {
   .text-balance {

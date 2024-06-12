@@ -14,31 +14,32 @@ export default function Navbar() {
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
         if (!isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = 'hidden'; 
         } else {
-            document.body.style.overflow = ''; // Re-enable scrolling when menu is closed
+            document.body.style.overflow = ''; 
         }
     };
 
     const closeMobileMenu = () => {
         console.log("I am fired")
         setIsMobileMenuOpen(false);
-        document.body.style.overflow = ''; // Re-enable scrolling
+        document.body.style.overflow = '';
     };
 
     useEffect(() => {
         if (isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            document.body.style.overflow = 'hidden'; 
         } else {
-            document.body.style.overflow = ''; // Re-enable scrolling when menu is closed
+            document.body.style.overflow = 'auto'; 
         }
     }, [isMobileMenuOpen]);
 
     return (
-        <div className={`lg:w-full relative flex items-center justify-between px-8 lg:px-4`}>
+        <div className={`lg:w-full relative flex items-center justify-between px-8 lg:px-4 md:py-2 md:px-8`}>
             {/* For Name and Logo */}
             <Link href={"/"}>
-                <h1 className="flex items-center text-[30px] text-[#14279B] font-[650]">
+                <h1 className="flex items-center justify-center text-[30px] text-[#14279B] font-[650] lg:px-5">
                     {/* Logo */}
                     <div>
                         <Image
@@ -80,7 +81,7 @@ export default function Navbar() {
                 </button>
             </div>
 
-            <nav className={`${isMobileMenuOpen ? 'absolute z-[56] left-0 top-7 w-full px-6 py-2 ' : 'hidden'} lg:w-fit lg:block lg:relative lg:px-4 lg:top-0`}>
+            <nav className={`${isMobileMenuOpen ? 'absolute z-[56] left-0 top-7 w-full px-6 py-2 ' : 'hidden'} lg:w-fit lg:block lg:relative lg:px-4 lg:py-1 lg:top-0`}>
                 <ul className="list-none lg:flex lg:h-fit h-[100vh] bg-white items-center justify-between flex-wrap py-2 gap-8 rounded-md" style={{ zIndex: 60 }}>
                     {
                         navbarData?.map((item, index) => (
