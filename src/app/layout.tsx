@@ -30,7 +30,7 @@ export default function RootLayout({
           <Navbar />
         </div>
 
-        <div>
+        <div className="lg:w-[85%] mx-auto navbar-spacing">
           {children}
         </div>
       </body>
