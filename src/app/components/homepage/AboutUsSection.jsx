@@ -1,24 +1,23 @@
 import React from 'react'
 import aboutUsListData from '../../data/aboutUsListData'
+import SectionHeadings from '../common/SectionHeadings';
 
 
-function AboutUs() {
+function AboutUsSection() {
     return (
         <section>
             {/* heading Div */}
             <div>
-                <div></div>
-                <h2>ABOUT US</h2>
-                <div></div>
+                <SectionHeadings heading={'ABOUT US'} />
             </div>
 
             {/* content div */}
             <div>
                 {/* left section */}
                 <div>
-                    <div>
+                    <p>
                         We are Akeshya, a firm that specializes in web design and marketing. We help transform ideas into reality with a team of passionate graphic designers, web developers, and seasoned marketing advisors.
-                    </div>
+                    </p>
 
                     <ul>
                        {
@@ -56,4 +55,4 @@ function AboutUs() {
     )
 }
 
-export default AboutUs;
+export default AboutUsSection;

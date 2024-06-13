@@ -4,6 +4,9 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import 'remixicon/fonts/remixicon.css'; 
 import Navbar from "./components/common/Navbar";
+import '@fortawesome/fontawesome-svg-core/styles.css'; 
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
@@ -30,6 +33,7 @@ export default function RootLayout({
     <html lang="en" >
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/60291d3ff4.js" crossorigin="anonymous"></script>
       </head>
 
       <body suppressHydrationWarning={true} className={`${openSans.className} ${raleway.className}`}>

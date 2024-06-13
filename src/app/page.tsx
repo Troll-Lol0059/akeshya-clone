@@ -1,8 +1,11 @@
 import HeroSection from './components/homepage/HeroSection';
 import ClientSection from './components/homepage/ClientSection';
-import AboutUs from './components/homepage/AboutUs';
-import ServiceStats from '../app/components/homepage/ServiceStats'
-
+import AboutUsSection from './components/homepage/AboutUsSection';
+import ServicesStatsSection from './components/homepage/ServiceStatsSection';
+import ProcessSection from './components/homepage/ProcessSection';
+import ServicesSection from './components/homepage/ServicesSection';
+import FeaturesSection from './components/homepage/FeaturesSection';
+import ContactUsSection from './components/homepage/ContactUsSection'
 
 export default function Home() {
   return (
@@ -16,17 +19,30 @@ export default function Home() {
       </div>
 
       <div className='lg:w-[85%] mx-auto bg-white' >
-          <AboutUs />
+          <AboutUsSection />
       </div>
 
       <div className='lg:w-[85%] mx-auto bg-white'>
-        <ServiceStats />
+        <ServicesStatsSection />
       </div>
-      
-      
-      <div className='h-[2000px] min-h-[1500px]'>
 
+      <div id='services' className='lg:w-[85%] mx-auto bg-white'>
+        <ServicesSection />
       </div>
+
+      <div className='lg:w-[85%] mx-auto bg-white'>
+        <ProcessSection />
+      </div>
+
+      <div className='lg:w-[85%] mx-auto bg-white'>
+        <FeaturesSection />
+      </div>
+
+      <div className='lg:w-[85%] mx-auto bg-white'>
+        <ContactUsSection />
+      </div>
+      
+      
     </div>
   );
 }
