@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import heroSectionImage from '../../../public/images/hero-img.png'
+import heroSectionImage from '../../../../public/images/hero-img.png'
 
 
 function HeroSection() {
