@@ -22,7 +22,6 @@ export default function Navbar() {
     };
 
     const closeMobileMenu = () => {
-        console.log("I am fired")
         setIsMobileMenuOpen(false);
         document.body.style.overflow = '';
     };
@@ -97,7 +96,7 @@ export default function Navbar() {
             {/* Background Overlay */}
             {isMobileMenuOpen && (
                 <div className="lg:hidden w-full fixed inset-0 bg-[#090909] bg-opacity-90 backdrop-filter transition duration-300 pointer-events-none z-[55]">
-                    <div className="absolute right-4 top-5 ">
+                    <div className="absolute right-7 top-6 ">
                         <button onClick={closeMobileMenu} className="text-white font-semibold">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

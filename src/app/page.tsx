@@ -22,19 +22,19 @@ export default function Home() {
           <AboutUsSection />
       </div>
 
-      <div className='lg:w-[85%] mx-auto bg-white'>
+      <div className='lg:w-[85%] xl:w-[85%] mx-auto bg-white'>
         <ServicesStatsSection />
       </div>
 
-      <div id='services' className='lg:w-[85%] mx-auto bg-white'>
+      <div id='services' className='lg:w-[90%] xl:w-[85%] mx-auto bg-white'>
         <ServicesSection />
       </div>
 
-      <div className='lg:w-[85%] mx-auto bg-white'>
+      <div className='lg:w-[85%] xl:w-[85%] mx-auto bg-white'>
         <ProcessSection />
       </div>
 
-      <div className='lg:w-[85%] mx-auto bg-white'>
+      <div className='lg:w-[85%] xl:w-[85%] mx-auto bg-white'>
         <FeaturesSection />
       </div>
 

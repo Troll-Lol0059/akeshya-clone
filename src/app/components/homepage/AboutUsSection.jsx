@@ -40,7 +40,7 @@ function AboutUsSection() {
                 </div>
 
                 {/* right section */}
-                <div className='lg:w-[50%] lg:px-3 lg:space-y-0 space-y-6'>
+                <div className='lg:w-[50%] lg:px-3 space-y-6'>
                     <div>
                         We're professional, but we're also friendly, and we'll always pay attention to your concerns. We expect to work with innovative people that have an open mind and are dedicated to making every idea a reality. We want to hear from you if you're interested in SEO, have Web Development ideas, or require a graphic designer who can match your goals.
                     </div>

@@ -8,8 +8,8 @@ function HeroSection() {
   return (
     <section className='lg:w-full flex lg:flex-row flex-col-reverse justify-center lg:gap-0 gap-6 lg:py-4'>
         {/* content DIV */}
-        <div className='lg:w-[50%] font-raleway lg:px-3 px-16 md:px-10 lg:py-7 lg:block flex flex-col items-start'>
-            <h2 className='lg:text-[48px] text-[28px] text-blueVoilet font-bold lg:w-[90%] lg:leading-[3.5rem]'>
+        <div className='lg:w-[50%] font-raleway lg:px-3 px-16 md:px-10 lg:py-7 lg:block flex flex-col items-start md:mb-40'>
+            <h2 className='lg:text-[48px] text-[28px] text-blueVoilet font-bold lg:leading-[3.5rem]'>
                 Grow your business with Akeshya
             </h2>
 

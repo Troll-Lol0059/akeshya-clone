@@ -2,7 +2,7 @@ import React from 'react'
 
 function SectionHeadings({ heading, subheading='' }) {
     return (
-        <div>
+        <div className='flex flex-col items-center gap-3'>
             {/* heading div */}
             <div className='flex gap-4 justify-center items-center'>
                 <div className='h-[2px] w-14 bg-blueVoilet'></div>
@@ -13,7 +13,7 @@ function SectionHeadings({ heading, subheading='' }) {
             </div>
 
             {/* Subheading div */}
-            <div className=''>
+            <div className='px-auto'>
                 <p className='text-black4 text-[16px] font-openSans'>{subheading}</p>
             </div>
         </div>
