@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import heroSectionImage from '../../../../public/images/hero-img.png'
+import heroSectionImage from '../../../../public/images/hero-img.png';
+import Button1 from '../common/Button1';
 
 
 function HeroSection() {
@@ -16,9 +17,7 @@ function HeroSection() {
                 We are team of talented website designers, developers & digital marketeers
             </h3>
 
-            <button className='text-[16px] font-[500] tracking-[1px] px-8 py-[10px] my-6 lg:my-11 rounded-[50px] border-2 border-blueVoilet text-blueVoilet transition-all duration-500 hover:bg-blueVoilet hover:text-white'>
-                Get Started
-            </button>
+            <Button1 text={'Get Started'} customClass={'px-8 py-[10px] my-6 lg:my-11'} />
         </div>
 
         {/* image div */}

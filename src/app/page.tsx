@@ -9,16 +9,16 @@ import ContactUsSection from './components/homepage/ContactUsSection'
 
 export default function Home() {
   return (
-    <div className='lg:w-full'>
-      <div className='lg:w-[85%] mx-auto'>
+    <div className='w-full'>
+      <div className='lg:w-[95%] xl:w-[85%] mx-auto'>
         <HeroSection />
       </div>
 
-      <div className='lg:w-full bg-[#F3F9FD]'>
+      <div className='lg:w-full xl:w-full bg-[#F3F9FD]'>
         <ClientSection />
       </div>
 
-      <div className='lg:w-[85%] mx-auto bg-white' >
+      <div className='lg:w-[95%] xl:w-[85%] md:w-[90%] w-[80%] mx-auto bg-white' >
           <AboutUsSection />
       </div>
 

@@ -81,7 +81,7 @@ export default function Navbar() {
                 </button>
             </div>
 
-            <nav className={`${isMobileMenuOpen ? 'absolute z-[56] left-0 top-7 w-full px-6 py-2 ' : 'hidden'} lg:w-fit lg:block lg:relative lg:px-4 lg:py-1 lg:top-0`}>
+            <nav className={`${isMobileMenuOpen ? 'absolute z-[56] left-0 top-7 w-full px-3 py-4 ' : 'hidden'} lg:w-fit w-full lg:block lg:relative lg:px-4 lg:py-1 lg:top-0`}>
                 <ul className="list-none lg:flex lg:h-fit h-[100vh] bg-white items-center justify-between flex-wrap py-2 gap-8 rounded-md" style={{ zIndex: 60 }}>
                     {
                         navbarData?.map((item, index) => (
@@ -96,8 +96,8 @@ export default function Navbar() {
 
             {/* Background Overlay */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden fixed inset-0 bg-[#090909] bg-opacity-90 backdrop-filter transition duration-300 pointer-events-none z-[55]">
-                    <div className="absolute right-7 top-5 ">
+                <div className="lg:hidden w-full fixed inset-0 bg-[#090909] bg-opacity-90 backdrop-filter transition duration-300 pointer-events-none z-[55]">
+                    <div className="absolute right-4 top-5 ">
                         <button onClick={closeMobileMenu} className="text-white font-semibold">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

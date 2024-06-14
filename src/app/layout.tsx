@@ -33,11 +33,11 @@ export default function RootLayout({
     <html lang="en" >
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/60291d3ff4.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/60291d3ff4.js" crossOrigin="anonymous"></script>
       </head>
 
       <body suppressHydrationWarning={true} className={`${openSans.className} ${raleway.className}`}>
-        <div className="lg:w-[88%] mx-auto fixed top-0 right-0 left-0 z-[1000] lg:flex items-center py-6 px-6 lg:py-[8px] lg:px-0 md:px-0 md:py-[16px] bg-white shadow-sm">
+        <div className="lg:w-[95%] xl:w-[90%] w-full mx-auto fixed top-0 right-0 left-0 z-[1000] lg:flex items-center md:px-0 md:py-4 py-6 bg-white shadow-b-sm">
           <Navbar />
         </div>
 

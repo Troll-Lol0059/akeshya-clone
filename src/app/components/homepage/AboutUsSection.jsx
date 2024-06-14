@@ -1,37 +1,38 @@
 import React from 'react'
 import aboutUsListData from '../../data/aboutUsListData'
 import SectionHeadings from '../common/SectionHeadings';
+import Button1 from '../common/Button1';
 
 
 function AboutUsSection() {
     return (
-        <section>
+        <section className='flex flex-col items-center justify-center gap-8 my-16'>
             {/* heading Div */}
             <div>
                 <SectionHeadings heading={'ABOUT US'} />
             </div>
 
             {/* content div */}
-            <div>
+            <div className='lg:w-full flex lg:flex-row flex-col justify-center text-[1rem] font-openSans text-black4 leading-[1.5] font-[500] tracking-normal lg:gap-2 gap-8'>
                 {/* left section */}
-                <div>
+                <div className='lg:w-[50%] lg:px-3 lg:space-y-0 space-y-4'>
                     <p>
                         We are Akeshya, a firm that specializes in web design and marketing. We help transform ideas into reality with a team of passionate graphic designers, web developers, and seasoned marketing advisors.
                     </p>
 
-                    <ul>
+                    <ul className='lg:py-4'>
                        {
                          aboutUsListData?.map( (item) => (
-                            <li key={item.id}>
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.602 13.7599L13.014 15.1719L21.4795 6.7063L22.8938 8.12051L13.014 18.0003L6.65 11.6363L8.06421 10.2221L10.189 12.3469L11.6025 13.7594L11.602 13.7599ZM11.6037 10.9322L16.5563 5.97949L17.9666 7.38977L13.014 12.3424L11.6037 10.9322ZM8.77698 16.5873L7.36396 18.0003L1 11.6363L2.41421 10.2221L3.82723 11.6352L3.82604 11.6363L8.77698 16.5873Z"></path></svg>
-                                </span>
+                            <li key={item.id} className='flex items-start gap-2 lg:py-1'>
+                                <div className='text-blueVoilet text-[20px]'>
+                                    <i class="ri-check-double-line"></i>
+                                </div>
 
-                                <span>
+                                <div className='py-1'>
                                     {
                                         item.data
                                     }
-                                </span>
+                                </div>
                             </li>
                          ) )
                        }
@@ -39,14 +40,12 @@ function AboutUsSection() {
                 </div>
 
                 {/* right section */}
-                <div>
+                <div className='lg:w-[50%] lg:px-3 lg:space-y-0 space-y-6'>
                     <div>
                         We're professional, but we're also friendly, and we'll always pay attention to your concerns. We expect to work with innovative people that have an open mind and are dedicated to making every idea a reality. We want to hear from you if you're interested in SEO, have Web Development ideas, or require a graphic designer who can match your goals.
                     </div>
 
-                    <div>
-                        Learn More
-                    </div>
+                    <Button1 text={'Learn More'} customClass={'px-8 py-[6px] lg:my-6 xl:my-6'} />
                 </div>
 
             </div>

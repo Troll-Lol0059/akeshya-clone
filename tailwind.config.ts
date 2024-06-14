@@ -15,11 +15,12 @@ const config: Config = {
         black1:"#111111",
         black2:"#222222",
         black3:"#333333",
-        black4:"#484848",
+        black4:"#444444",
+        black4a:"#484848",
         black5:"#555555",
       },
       fontFamily: {
-        openSans: ['"Open Sans"', 'sans-serif'],
+        openSans: ['Open Sans', 'sans-serif'],
         raleway: ['"Raleway"', 'sans-serif'],
       },
       backgroundImage: {
