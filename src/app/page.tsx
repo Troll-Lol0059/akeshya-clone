@@ -30,7 +30,7 @@ export default function Home() {
         <ServicesSection />
       </div>
 
-      <div className='lg:w-[85%] xl:w-[85%] mx-auto bg-white'>
+      <div className='lg:w-[95%] xl:w-[90%] mx-auto bg-white'>
         <ProcessSection />
       </div>
 

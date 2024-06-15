@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         white:"#ffffff",
+        white6:"#f6f6f6",
         blueVoilet: "#14279B",
         black:"#fff",
         black1:"#111111",
