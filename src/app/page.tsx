@@ -40,8 +40,7 @@ export default function Home() {
 
       <div className='lg:w-[85%] mx-auto bg-white'>
         <ContactUsSection />
-      </div>
-      
+      </div>      
       
     </div>
   );

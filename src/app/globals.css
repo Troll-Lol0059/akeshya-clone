@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-spacing {
-  margin-top: var(--navbar-height, 90px);
+  margin-top: var(--navbar-height, 80px);
 }
 
 /* Animation for Hero Section Image */
@@ -120,6 +120,12 @@ body {
 .services-div:hover .shrink-div {
   transform: scale(2);
   transition: transform 0.2s;
+}
+
+
+/* input text area style */
+.text-area {
+  min-height: calc(1.5em + .75rem + 2px);
 }
 
 

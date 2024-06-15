@@ -19,6 +19,7 @@ const config: Config = {
         black4:"#444444",
         black4a:"#484848",
         black5:"#555555",
+        black8:"#888888",
       },
       fontFamily: {
         openSans: ['Open Sans', 'sans-serif'],

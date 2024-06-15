@@ -8,7 +8,7 @@ function HeroSection() {
   return (
     <section className='lg:w-full flex lg:flex-row flex-col-reverse justify-center lg:gap-0 gap-6 lg:py-4'>
         {/* content DIV */}
-        <div className='lg:w-[50%] font-raleway lg:px-3 px-16 md:px-10 lg:py-7 lg:block flex flex-col items-start md:mb-40'>
+        <div className='lg:w-[50%] font-raleway lg:px-3 px-16 md:px-10 lg:my-7 xl:mb-0 xl:mt-8 lg:block flex flex-col items-start md:mb-40'>
             <h2 className='lg:text-[48px] text-[28px] text-blueVoilet font-bold lg:leading-[3.5rem]'>
                 Grow your business with Akeshya
             </h2>
@@ -21,7 +21,7 @@ function HeroSection() {
         </div>
 
         {/* image div */}
-        <div className='lg:w-[50%] flex lg:justify-start justify-center lg:overflow-y-hidden my-[22px] lg:px-16 lg:my-0 md:mt-36 md:mb-4'>
+        <div className='lg:w-[50%] flex lg:justify-start justify-center lg:overflow-y-hidden my-[22px] lg:px-16 lg:my-0 xl:my-0 md:mt-36 md:mb-4'>
             <Image src={heroSectionImage}
                 className="imageAnimation lg:w-[420px] w-[57%] md:w-[70%] lg:h-[300px]"
                 alt='Hero Section Image'

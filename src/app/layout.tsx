@@ -37,11 +37,11 @@ export default function RootLayout({
       </head>
 
       <body suppressHydrationWarning={true} className={`${openSans.className} ${raleway.className}`}>
-        <div className="lg:w-[95%] xl:w-[90%] w-full mx-auto fixed top-0 right-0 left-0 z-[1000] lg:flex items-center md:px-0 md:py-4 py-6 bg-white shadow-b-sm">
+        <div className="w-full mx-auto fixed top-0 right-0 left-0 z-[1000] lg:flex items-center md:px-0 md:py-4 bg-white">
           <Navbar />
         </div>
 
-        <div className="lg:w-full mx-auto navbar-spacing z-[0]">
+        <div className="mx-auto navbar-spacing z-[0]">
           {children}
         </div>
         

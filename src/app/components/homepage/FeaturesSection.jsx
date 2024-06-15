@@ -12,7 +12,7 @@ function FeaturesSection() {
         <div className='grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 lg:grid-cols-4 gap-6 px-4'>
             {
                 featuresDataArray?.map( (item) => (
-                    <div key={item.id} className='flex gap-4 items-center bg-[#f6f6f6] xl:px-4 lg:px-2 py-4 group hover:bg-[#E1F0FA]'>
+                    <div key={item.id} className='flex gap-4 items-center bg-[#f6f6f6] xl:px-4 lg:px-2 py-4 group hover:bg-[#E1F0FA] rounded-sm'>
                         {/* icon div */}
                         <div className='text-[32px] leading-[1] font-normal' style={{ color: item.color }}>
                           <i class={item.iconName}></i>     

@@ -5,20 +5,17 @@ import navbarData from '../../data/navdata'
 import Logo from '../../../../public/images/logo.png'
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from "react"
+import useScrollPosition from '../../hooks/useScrollPosition'; 
 
 export default function Navbar() {
-    // fetches pathname of Current Page
+    // Fetches pathname of Current Page
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const isScrolled = useScrollPosition();
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
-        if (!isMobileMenuOpen) {
-            // Prevent scrolling when menu is open
-            document.body.style.overflow = 'hidden'; 
-        } else {
-            document.body.style.overflow = ''; 
-        }
+        document.body.style.overflow = isMobileMenuOpen ? '' : 'hidden';
     };
 
     const closeMobileMenu = () => {
@@ -27,18 +24,14 @@ export default function Navbar() {
     };
 
     useEffect(() => {
-        if (isMobileMenuOpen) {
-            document.body.style.overflow = 'hidden'; 
-        } else {
-            document.body.style.overflow = 'auto'; 
-        }
+        document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'auto';
     }, [isMobileMenuOpen]);
 
     return (
-        <div className={`lg:w-full relative flex items-center justify-between px-8 lg:px-4 md:py-2 md:px-8`}>
+        <div className={`w-full mx-auto relative flex items-center justify-between px-8 xl:px-[90px] lg:px-4 md:py-2 md:px-8 transition-all duration-300 ${isScrolled && 'py-2 lg:py-1 shadow-lg lg:shadow-md'} ${isScrolled ? 'lg:py-1' : 'py-4'}`}>
             {/* For Name and Logo */}
             <Link href={"/"}>
-                <h1 className="flex items-center justify-center text-[30px] text-[#14279B] font-[650] lg:px-5">
+                <h1 className="flex items-center justify-center text-[30px] text-[#14279B] font-semibold lg:px-5 transition-all duration-300" >
                     {/* Logo */}
                     <div>
                         <Image
@@ -56,7 +49,7 @@ export default function Navbar() {
                 </h1>
             </Link>
 
-            <div className="lg:hidden px-4">
+            <div className="lg:hidden px-4 z-50">
                 <button
                     onClick={toggleMobileMenu}
                     className="text-gray-600 focus:outline-none focus:text-gray-900"
@@ -68,12 +61,19 @@ export default function Navbar() {
                         viewBox="0 0 24 24"
                         stroke="currentColor"
                     >
-                        {!isMobileMenuOpen && (
+                        {!isMobileMenuOpen ? (
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth={2}
                                 d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        ) : (
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
                             />
                         )}
                     </svg>
@@ -84,8 +84,8 @@ export default function Navbar() {
                 <ul className="list-none lg:flex lg:h-fit h-[100vh] bg-white items-center justify-between flex-wrap py-2 gap-8 rounded-md" style={{ zIndex: 60 }}>
                     {
                         navbarData?.map((item, index) => (
-                            <li key={index} className={item.path === '/contact' ? 'bg-[#14279B] px-6 py-2 mx-4 rounded-full text-white text-[15px] font-[500] hover:bg-[#0d6efd] transition-all lg:mx-0'
-                                : `${item.path === pathname ? 'text-[#14279B]' : 'text-[#555555]'}  text-[15px] py-3 hover:text-[#14279B] transition-all px-6 lg:px-0 lg:py-4`} >
+                            <li key={index} className={item.path === '/contact' ? 'bg-[#14279B] px-6 py-2 mx-4 rounded-full text-white text-[15px] font-medium hover:bg-[#0d6efd] transition-all lg:mx-0'
+                                : `${item.path === pathname ? 'text-[#14279B]' : 'text-[#555555]'} font-openSans text-[15px] py-3 hover:text-[#14279B] transition-all px-6 lg:px-0 lg:py-4`} >
                                 <Link href={item.path}>{item.title}</Link>
                             </li>
                         ))
@@ -95,8 +95,8 @@ export default function Navbar() {
 
             {/* Background Overlay */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden w-full fixed inset-0 bg-[#090909] bg-opacity-90 backdrop-filter transition duration-300 pointer-events-none z-[55]">
-                    <div className="absolute right-7 top-6 ">
+                <div className="lg:hidden w-full fixed inset-0 bg-[#090909] bg-opacity-90 transition duration-300 z-[55]">
+                    <div className="absolute md:right-6 md:top-6 top-4 right-5 z-[57]">
                         <button onClick={closeMobileMenu} className="text-white font-semibold">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -119,3 +119,5 @@ export default function Navbar() {
         </div>
     )
 }
+
+
