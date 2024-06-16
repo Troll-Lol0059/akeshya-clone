@@ -1,3 +1,4 @@
+"use client"
 import HeroSection from './components/homepage/HeroSection';
 import ClientSection from './components/homepage/ClientSection';
 import AboutUsSection from './components/homepage/AboutUsSection';
@@ -5,12 +6,30 @@ import ServicesStatsSection from './components/homepage/ServiceStatsSection';
 import ProcessSection from './components/homepage/ProcessSection';
 import ServicesSection from './components/homepage/ServicesSection';
 import FeaturesSection from './components/homepage/FeaturesSection';
-import ContactUsSection from './components/homepage/ContactUsSection'
+import ContactUsSection from './components/homepage/ContactUsSection';
+import ScrollToTopButton from './components/common/scrollToTopButton';
+import ThankYourForContacting from './components/homepage/ThankYouForContacting';
+
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
 
 export default function Home() {
+
+  const { formData } = useSelector((state) => state.formData);
+  const showThankYou = formData !== null;
+
+  useEffect(() => {
+    if (showThankYou) {
+      document.title = 'Thank You - Your Website Title';
+    } else {
+      document.title = 'Akeshya';
+    }
+  }, [showThankYou]);
+
   return (
     <div className='w-full'>
-      <div className='lg:w-[95%] xl:w-[85%] mx-auto'>
+      <div id='/#heroSection' className='lg:w-[95%] xl:w-[85%] mx-auto'>
         <HeroSection />
       </div>
 
@@ -18,11 +37,11 @@ export default function Home() {
         <ClientSection />
       </div>
 
-      <div className='lg:w-[95%] xl:w-[85%] md:w-[90%] w-[80%] mx-auto bg-white' >
-          <AboutUsSection />
+      <div id='aboutUs' className='lg:w-[95%] xl:w-[85%] md:w-[90%] w-[80%] mx-auto bg-white' >
+        <AboutUsSection />
       </div>
 
-      <div className='lg:w-[85%] xl:w-[85%] mx-auto bg-white'>
+      <div id='services' className='lg:w-[85%] xl:w-[85%] mx-auto bg-white'>
         <ServicesStatsSection />
       </div>
 
@@ -40,8 +59,16 @@ export default function Home() {
 
       <div className='lg:w-[85%] mx-auto bg-white'>
         <ContactUsSection />
-      </div>      
-      
+      </div>
+
+      <ScrollToTopButton />
+
+      {
+        formData && (
+          <ThankYourForContacting />
+        )
+      }
+
     </div>
   );
 }

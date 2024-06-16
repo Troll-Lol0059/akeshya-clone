@@ -9,7 +9,7 @@ const navbarData = [
     },
     {
         title: "Services",
-        path: '#services',
+        path: '/#services',
     },
     {
         title: "Contact us",

@@ -1,12 +1,18 @@
+// third party font and icons
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import 'remixicon/fonts/remixicon.css'; 
-import Navbar from "./components/common/Navbar";
-import '@fortawesome/fontawesome-svg-core/styles.css'; 
+import 'remixicon/fonts/remixicon.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
+
+// components
+import Navbar from "./components/common/Navbar";
+import Footer from './components/common/Footer';
+
+import StoreProvider from './StoreProvider';
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
@@ -37,14 +43,22 @@ export default function RootLayout({
       </head>
 
       <body suppressHydrationWarning={true} className={`${openSans.className} ${raleway.className}`}>
-        <div className="w-full mx-auto fixed top-0 right-0 left-0 z-[1000] lg:flex items-center md:px-0 md:py-4 bg-white">
+        <div className="w-full mx-auto fixed top-0 right-0 left-0 z-[1000] lg:flex items-center md:px-0 md:py-4 xl:py-0 lg:py-0 bg-white">
           <Navbar />
         </div>
 
-        <div className="mx-auto navbar-spacing z-[0]">
-          {children}
+
+        <StoreProvider>
+          <div className="mx-auto navbar-spacing z-[0]">
+            {children}
+          </div>
+        </StoreProvider>
+
+
+        <div>
+          <Footer />
         </div>
-        
+
       </body>
     </html>
   );

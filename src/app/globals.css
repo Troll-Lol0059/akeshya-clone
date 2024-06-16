@@ -35,6 +35,17 @@ body {
   scroll-behavior: smooth;
 }
 
+.container {
+  width: 95%;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.container-full {
+  width: 100%;
+}
+
+
 .button{
   transition-duration: 0.5s;
 }

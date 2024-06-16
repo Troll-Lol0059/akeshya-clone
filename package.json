@@ -13,11 +13,17 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-hook/media-query": "^1.1.1",
+    "@reduxjs/toolkit": "^2.2.5",
+    "framer-motion": "^11.2.10",
     "next": "14.2.3",
     "next-google-fonts": "^2.2.0",
+    "next-redux-wrapper": "^8.1.0",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
+    "react-hook-form": "^7.52.0",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
     "remixicon": "^4.3.0"
   },
   "devDependencies": {
