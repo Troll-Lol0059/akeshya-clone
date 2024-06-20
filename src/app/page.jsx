@@ -21,7 +21,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showThankYou) {
-      document.title = 'Thank You - Your Website Title';
+      document.title = 'Thank You - Akeshya';
     } else {
       document.title = 'Akeshya';
     }
